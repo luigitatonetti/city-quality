@@ -1,5 +1,6 @@
 import axios from 'axios';
-import _ from 'lodash';
+//import _ from 'lodash';
+const get = require('lodash.get')
 
 const searchBar = document.querySelector('[text-box]');
 const searchButton = document.querySelector('[search]');
@@ -29,7 +30,7 @@ function animateElements() {
 
 function setScores(cityData, citySummary, cityScore, city){
     for (let i = 0; i < cityData.length; i++) {
-        const score = _.get(cityData, `${i}.score_out_of_10`);
+        const score = get(cityData, `${i}.score_out_of_10`);
         document.querySelector(`[data-scores-percent-${i}]`).innerText = `${Math.round(score)}/10`;
         document.querySelector(`[data-scores-fill-${i}]`).classList.remove('oto');
         document.querySelector(`[data-scores-fill-${i}]`).classList.add('scores-fill', 'tot');
@@ -63,9 +64,9 @@ async function fetchCity(){
                 
         const response = await axios.get(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`);
 
-        const cityData = _.get(response, 'data.categories');
-        const citySummary = _.get(response, 'data.summary');
-        const cityScore = _.get(response, 'data.teleport_city_score');
+        const cityData = get(response, 'data.categories', []);
+        const citySummary = get(response, 'data.summary', []);
+        const cityScore = get(response, 'data.teleport_city_score', []);
         setScores(cityData, citySummary, cityScore, city);
 
     } catch (error) {
