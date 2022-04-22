@@ -1,6 +1,6 @@
 import axios from 'axios';
 import _ from 'lodash';
-
+import styles from '../css/styles.css';
 
 const searchBar = document.querySelector('[data-text-box]');
 const searchButton = document.querySelector('[data-button]');
