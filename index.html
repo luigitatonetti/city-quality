@@ -12,211 +12,129 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
   </head>
   <body>
-    <main class="main text-center ">
-      <div class="title text-center py-4">
-        <h1>Check the lifestyle quality of any city</h1>
+    <main class="main">
+      <div class="text-center py-3">
+        <h1 class="display-4">Find the scores of a city</h1>
       </div>
-      <form class="text-center py-2">
-        <input text-box type="text" id="input" placeholder='Ex: "Rome"' />
-        <button search class="btn btn-dark" type="submit">Search</button>
-      </form>
-      <div data-input-error class="input-error">
-        <p class="error-text">City not found. Please insert a valid city.</p>
-      </div>
-
-      <div data-hidden-elements class="hidden-elements">
-        <p data-summary></p>
-      </div>
-
-      <div data-scores-div class="scores">
-        <div>
-          <div class="scores-title">
-            Housing
-            <span data-scores-percent-0 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-0 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Cost of Living
-            <span data-scores-percent-1 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-1 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Startups
-            <span data-scores-percent-2 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-2 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Venture Capital
-            <span data-scores-percent-3 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-3 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Travel Connectivity
-            <span data-scores-percent-4 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-4 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Commute
-            <span data-scores-percent-5 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-5 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Business Freedom
-            <span data-scores-percent-6 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-6 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Safety
-            <span data-scores-percent-7 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-7 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Healthcare
-            <span data-scores-percent-8 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-8 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Education
-            <span data-scores-percent-9 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-9 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Environmental Quality
-            <span data-scores-percent-10 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-10 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Economy
-            <span data-scores-percent-11 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-11 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Taxation
-            <span data-scores-percent-12 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-12 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Internet Access
-            <span data-scores-percent-13 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-13 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Leisure & Culture
-            <span data-scores-percent-14 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-14 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Tolerance
-            <span data-scores-percent-15 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-15 class="empty-fill"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="scores-title">
-            Outdoors
-            <span data-scores-percent-16 class="scores-percent">0/10</span>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-16 class="empty-fill"></div>
-          </div>
+      <div
+        class="search col-12 form-group form-inline py-2 justify-content-center"
+      >
+        <input
+          data-text-box
+          class="form-control col-4"
+          type="search"
+          placeholder="City name"
+        />
+        <button data-button class="btn btn-dark" type="submit">search</button>
+        <div data-input-error class="input-error col-12 text-center">
+          <p>City not found. Please insert a valid city.</p>
         </div>
       </div>
 
-      <div data-hidden-elements class="hidden-data">
-        <div class="visual">
-          <div class="scores-title overall">
-            Overall
-            <h3>
-              <span id="#city-score" class="scores-percent">0/10</span>
-            </h3>
-          </div>
-          <div class="scores-bar">
-            <div data-scores-fill-17 class="empty-fill"></div>
-          </div>
+      <div class="text-center px-5">
+        <p data-summary class="justify-content-center py-2"></p>
+      </div>
+
+      <div class="container-fluid col-12 row text-center">
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Housing
+          <span data-scores-percent-0 class="scores-percent">0/10</span>
         </div>
 
-        <div class="info">
-          <a data-more-info class="more-info" target="_blank">more info</a>
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Cost of Living
+          <span data-scores-percent-1 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Startups
+          <span data-scores-percent-2 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Venture Capital
+          <span data-scores-percent-3 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Travel Connectivity
+          <span data-scores-percent-4 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Commute
+          <span data-scores-percent-5 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Business Freedom
+          <span data-scores-percent-6 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Safety
+          <span data-scores-percent-7 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Healthcare
+          <span data-scores-percent-8 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Education
+          <span data-scores-percent-9 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Environmental Quality
+          <span data-scores-percent-10 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Economy
+          <span data-scores-percent-11 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Taxation
+          <span data-scores-percent-12 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Internet Access
+          <span data-scores-percent-13 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-4 py-3">
+          Leisure & Culture
+          <span data-scores-percent-14 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-md-6 col-lg-6 py-3">
+          Tolerance
+          <span data-scores-percent-15 class="scores-percent">0/10</span>
+        </div>
+
+        <div class="categories col-12 col-lg-6 py-3">
+          Outdoors
+          <span data-scores-percent-16 class="scores-percent">0/10</span>
+        </div>
+      </div>
+
+      <div class="container-fluid row text-center">
+        <div class="display-4 col-12 pt-3">
+          Overall
+          <h4>
+            <span data-teleport-city-score class="display-4">0/10</span>
+          </h4>
+        </div>
+
+        <div class="col-12">
+          <a data-more-info target="_blank">more info on the city</a>
         </div>
       </div>
     </main>
