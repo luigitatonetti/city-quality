@@ -13,4 +13,4 @@ This app looks for the scores of a city in different categories, then gives you 
 * TELEPORT API
 
 ## Link
-[CITY QUALITY]()
+[CITY QUALITY](https://lt-city-quality.netlify.app/)
